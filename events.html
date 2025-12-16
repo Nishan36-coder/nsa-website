@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events — Nepalese Student Association</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Removed inline overrides to allow style.css to control the new light/centered theme -->
+</head>
+
+<body class="panel-bg">
+    <!-- decorative smoke layers (unified theme) -->
+    <div class="smoke-wrap" aria-hidden="true">
+        <span class="smoke s1"></span>
+        <span class="smoke s2"></span>
+        <span class="smoke s3"></span>
+        <span class="smoke s4"></span>
+    </div>
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <a href="index.html"><img src="assets/logo.jpeg" class="nav-logo" alt="NSA logo" width="48" height="48"
+                loading="lazy"></a>
+
+        <div class="nav-links" id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section class="page-hero">
+            <h1>Events</h1>
+            <p>Join us for our upcoming activities and celebrations.</p>
+        </section>
+
+        <!-- Main centered events panel -->
+        <section class="content events-manager-centered">
+
+            <!-- List updates to be Horizontal or Top-aligned -->
+            <aside class="events-selection-area" role="region" aria-label="Events list">
+                <div class="calendar-header-centered">
+                    <h3>Upcoming Events</h3>
+                    <button id="admin-toggle" aria-pressed="false" class="small-btn">Admin</button>
+                    <!-- Admin panel hidden by default -->
+                    <div id="admin-panel" class="admin-panel popup" hidden>
+                        <form id="add-event-form">
+                            <h4>Add event</h4>
+                            <label>Title <input id="ev-title" type="text" required></label>
+                            <label>Date <input id="ev-date" type="date" required></label>
+                            <label>Description <textarea id="ev-desc" rows="3" required></textarea></label>
+                            <button type="submit">Add event</button>
+                        </form>
+                        <button id="clear-events" style="margin-top:10px">Clear all events</button>
+                        <div class="admin-note">Stored locally in your browser.</div>
+                    </div>
+                </div>
+
+                <div id="events-list" class="events-list-horizontal" tabindex="0">
+                    <!-- event rows injected here -->
+                </div>
+            </aside>
+
+            <!-- Detail View -->
+            <div class="event-display-centered" aria-live="polite">
+                <div class="detail-header">
+                    <h2 id="selected-title">No event selected</h2>
+                    <div id="selected-date" class="event-date">—</div>
+                </div>
+
+                <div id="selected-desc" class="event-description">Select an event to see details.</div>
+
+                <form id="register-form" class="events-reg-form">
+                    <h3>Register Interest</h3>
+                    <input type="hidden" id="reg-event-id" value="">
+
+                    <div class="form-group">
+                        <label for="reg-name" class="sr-only">Your name</label>
+                        <input id="reg-name" type="text" placeholder="Full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-email" class="sr-only">Email</label>
+                        <input id="reg-email" type="text" placeholder="Email address" required>
+                    </div>
+
+                    <button type="submit" class="glow-btn">Register Now</button>
+                    <div id="reg-msg" aria-live="polite"></div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Nepalese Student Association | Morgan State University</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

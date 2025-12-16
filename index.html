@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Official website of the Nepalese Student Association (NSA) at Morgan State University. Discover our culture, events, gallery, and student community in Baltimore.">
+    <meta name="keywords"
+        content="Nepalese Student Association, NSA, Morgan State University, MSU, Nepal, Culture, Students, Baltimore, Events">
+    <meta name="robots" content="index, follow">
+    <title>Nepalese Student Association | Morgan State University</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/logo.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- JS-driven background slideshow (behind content) -->
+    <div class="bg-slideshow" aria-hidden="true">
+        <div class="slide"></div>
+        <div class="slide"></div>
+    </div>
+    <!-- Flag overlay shown on non-hero sections: blue / white / red mix -->
+    <div class="flag-overlay" aria-hidden="true"></div>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <img src="assets/logo.jpeg" class="nav-logo" alt="NSA logo" width="48" height="48" loading="lazy" />
+
+
+
+        <div class="nav-links" id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div id="nsa-card" class="hero-card" data-aos="zoom-in">
+            <!-- Video Background -->
+            <div class="video-background">
+                <iframe
+                    src="https://www.youtube.com/embed/W8f79_5tOIg?autoplay=1&mute=1&controls=0&loop=1&playlist=W8f79_5tOIg&playsinline=1&rel=0&start=60"
+                    title="Nepal Background Video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="hero-text">
+                <div class="logo-wrap">
+                    <img src="assets/logo.jpeg" class="logo" alt="Nepalese Student Association logo" width="140"
+                        height="140" loading="eager">
+                </div>
+
+                <h1 id="nsa-title">Nepalese Student Association</h1>
+                <p id="nsa-sub">Morgan State University</p>
+                <a href="gallery.html" class="glow-btn">Explore Our Culture 🇳🇵</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events removed from homepage; events moved to events.html -->
+
+    <!-- AI CHAT BUTTON -->
+    <button class="chat-btn" onclick="toggleChat()">Chat<br>NSA</button>
+
+    <div id="chatbox" aria-hidden="true">
+        <div class="chat-header">
+            <h3>NSA Assistant 🇳🇵</h3>
+            <button class="chat-close-btn" onclick="toggleChat()" aria-label="Close Chat">✕</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot">
+                <div class="msg-bubble">Namaste! 🙏 I'm the NSA AI. Ask me about our <b>events</b>, <b>board
+                        members</b>, or how to <b>join</b>!</div>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Type a question..." autocomplete="off">
+            <button id="chat-send" aria-label="Send message">➤</button>
+        </div>
+    </div>
+
+    <!-- Lightbox for gallery -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close">✕</button>
+        <button class="lightbox-prev" aria-label="Previous">◀</button>
+        <button class="lightbox-next" aria-label="Next">▶</button>
+        <div class="lightbox-content">
+            <img src="" alt="" />
+            <p class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Nepalese Student Association | Morgan State University</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+</body>
+
+</html>

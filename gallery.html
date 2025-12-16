@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery — Nepalese Student Association</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="panel-bg">
+    <!-- decorative smoke layers (unified theme) -->
+    <div class="smoke-wrap" aria-hidden="true">
+        <span class="smoke s1"></span>
+        <span class="smoke s2"></span>
+        <span class="smoke s3"></span>
+        <span class="smoke s4"></span>
+    </div>
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <a href="index.html"><img src="assets/logo.jpeg" class="nav-logo" alt="NSA logo" width="48" height="48"
+                loading="lazy"></a>
+
+        <div class="nav-links" id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="page-hero">
+            <h1>Gallery</h1>
+            <p>Beautiful scenery and heritage sites from Nepal.</p>
+        </section>
+
+        <!-- Admin Manager (Hidden, unlocked by Admin Login) -->
+        <section id="gallery-manager" style="display:none">
+            <div class="admin-controls" style="text-align: center; margin-bottom: 20px;">
+                <button id="gal-admin-toggle" class="small-btn">⚙️ Gallery Admin</button>
+            </div>
+            <div id="gal-admin-panel" class="admin-panel" hidden>
+                <h3>Add New Image</h3>
+                <form id="add-img-form">
+                    <input type="file" id="img-file" accept="image/*" required style="color:#fff; margin-bottom:10px;">
+                    <input type="text" id="img-caption" placeholder="Caption" required>
+                    <button type="submit" class="glow-btn small">Add to Gallery</button>
+                </form>
+            </div>
+        </section>
+
+
+
+        <section id="gallery-grid">
+            <div class="gallery" id="gallery-list">
+                <!-- Gallery items will be injected here by JS -->
+            </div>
+
+            <!-- Local lightbox for this page if opened standalone -->
+            <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+                <button class="lightbox-close" aria-label="Close">✕</button>
+                <button class="lightbox-prev" aria-label="Previous">◀</button>
+                <button class="lightbox-next" aria-label="Next">▶</button>
+                <div class="lightbox-content">
+                    <img src="" alt="" />
+                    <p class="lightbox-caption"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Nepalese Student Association | Morgan State University</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
