@@ -2410,42 +2410,50 @@ section.contact-card-centered button {
 
     /* Navigation - Keep horizontal, logo on left */
     .navbar {
-        padding: 8px 12px !important;
-        height: auto !important;
+        padding: 6px 8px !important;
+        height: 50px !important;
+        min-height: 50px !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: space-between !important;
+        align-items: center !important;
+        position: fixed !important;
+        top: 0 !important;
+        width: 100% !important;
+        z-index: 1000 !important;
     }
 
     .nav-logo {
-        width: 32px !important;
-        height: 32px !important;
-        flex-shrink: 0;
-        order: -1;
-        /* Ensure logo stays on left */
+        width: 30px !important;
+        height: 30px !important;
+        flex-shrink: 0 !important;
+        margin-right: 8px !important;
     }
 
     .nav-links {
-        gap: 4px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 2px !important;
         flex-wrap: nowrap !important;
-        overflow-x: auto;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
-        /* Hide scrollbar for Firefox */
+        max-width: calc(100vw - 60px) !important;
+        align-items: center !important;
     }
 
     .nav-links::-webkit-scrollbar {
         display: none;
-        /* Hide scrollbar for Chrome/Safari */
     }
 
     .nav-links a {
-        font-size: 0.75rem !important;
+        font-size: 0.7rem !important;
         margin-left: 0 !important;
-        padding: 6px 8px;
-        white-space: nowrap;
-        flex-shrink: 0;
+        padding: 4px 6px !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        display: inline-block !important;
     }
 
     /* Chat button - Above footer, smaller */
