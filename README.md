@@ -9,11 +9,7 @@ A modern, dynamic website for the Nepalese Student Association (NSA) at Morgan S
 - **Glassmorphism Design**: All pages (Home, About, Gallery, Events, Contact) use a unified frosted glass UI.
 - **Background Slideshow**: Non-homepage sections feature a cross-fading background slideshow.
 
-### 2. **Global Admin System 🔒**
-A client-side admin system allows you to manage the entire website directly from the browser.
-- **Login**: Click the **Lock Icon (🔒)** in the bottom-left corner.
-- **Password**: `HAGEC2025`
-- **Session**: Persists via LocalStorage (stays logged in until you click Logout).
+
 
 ### 3. **Admin Capabilities**
 Once logged in, you gain access to:
