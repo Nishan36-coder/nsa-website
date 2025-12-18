@@ -772,6 +772,7 @@ body.panel-bg main.container {
 }
 
 /* Ensure links scale down slightly on mobile */
+/* DISABLED - Conflicts with horizontal mobile navbar layout
 @media (max-width: 600px) {
     .nav-links {
         gap: 12px;
@@ -790,6 +791,7 @@ body.panel-bg main.container {
         gap: 10px;
     }
 }
+*/
 
 /* Mobile: collapse nav into a dropdown */
 /* Mobile: minimal adjustment, just stack if needed */
