@@ -2408,29 +2408,44 @@ section.contact-card-centered button {
         font-size: 0.9rem !important;
     }
 
-    /* Navigation - Stack and reduce size */
+    /* Navigation - Keep horizontal, logo on left */
     .navbar {
-        padding: 6px 10px !important;
+        padding: 8px 12px !important;
         height: auto !important;
-        flex-wrap: wrap;
-        gap: 8px;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .nav-logo {
-        width: 36px !important;
-        height: 36px !important;
+        width: 32px !important;
+        height: 32px !important;
+        flex-shrink: 0;
+        order: -1;
+        /* Ensure logo stays on left */
     }
 
     .nav-links {
-        gap: 6px !important;
-        width: 100%;
-        justify-content: center;
+        gap: 4px !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Hide scrollbar for Firefox */
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar for Chrome/Safari */
     }
 
     .nav-links a {
-        font-size: 0.8rem !important;
+        font-size: 0.75rem !important;
         margin-left: 0 !important;
-        padding: 5px 8px;
+        padding: 6px 8px;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
     /* Chat button - Smaller */
