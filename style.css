@@ -2448,22 +2448,48 @@ section.contact-card-centered button {
         flex-shrink: 0;
     }
 
-    /* Chat button - Smaller */
+    /* Chat button - Above footer, smaller */
     .chat-btn {
         width: 48px !important;
         height: 48px !important;
         font-size: 0.7rem !important;
-        bottom: 12px;
+        bottom: 80px !important;
+        /* Above footer */
         right: 12px;
     }
 
     /* Chatbox - Full width on mobile */
     #chatbox {
         width: calc(100% - 16px) !important;
-        height: 75vh !important;
-        bottom: 8px;
+        height: 70vh !important;
+        bottom: 80px !important;
+        /* Above footer */
         right: 8px;
         left: 8px;
+    }
+
+    /* Admin Lock Button - Smaller and properly positioned */
+    #admin-lock {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 16px !important;
+        bottom: 80px !important;
+        /* Above footer */
+        left: 12px !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* Footer - Better mobile layout */
+    footer {
+        padding: 16px 12px !important;
+        margin-top: 40px !important;
+        position: relative;
+        z-index: 100;
+    }
+
+    footer p {
+        font-size: 0.8rem !important;
+        line-height: 1.4;
     }
 
     /* Contact form - Tighter padding */
